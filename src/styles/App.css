@@ -1,0 +1,440 @@
+@font-face {
+    font-family: ‘Roboto’;
+    font-style: normal;
+    font-weight: 700;
+    src: Roboto-Regular.ttf;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    height: auto;
+    background-color: #1a1d40;
+}
+
+div,
+span,
+p {
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: #2196f3;
+}
+
+a:hover {
+    color: #00bcd4;
+}
+
+label {
+    cursor: pointer;
+}
+#links{
+    display: none;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 10px;
+  margin-bottom: 5px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#results {
+    margin-top: 3px;
+}
+
+#corner {
+    position: fixed;
+    top: 7px; 
+    right: 7px;
+    cursor: pointer;
+    z-index: 1000;
+    height: 7px;
+    width: 7px;
+}
+
+#cornerTwo {
+    position: fixed;
+    bottom: 7px; 
+    right: 7px;
+    cursor: pointer;
+    z-index: 1000;
+    height: 12px;
+    width: 12px;
+}
+
+#belowCorner {
+   top: 9px;
+   right: 18px;
+   z-index: 1; 
+   text-align: center;
+   font-family: 'Roboto';
+   font-size: 10px;
+   background-color: #1a1d40;
+   color: #fff;
+    /* Paua background color and white text */
+    padding: 3px;
+    margin: auto;
+    border-radius: 5px;
+    position: fixed;
+}
+
+#belowCornerTwo {
+   bottom: 9px;
+   right: 22px;
+   z-index: 1; 
+   text-align: center;
+   font-family: 'Roboto';
+   font-size: 10px;
+   background-color: #1a1d40;
+   color: #fff;
+    /* Paua background color and white text */
+    padding: 3px;
+    margin: auto;
+    border-radius: 5px;
+    position: fixed;
+}
+
+.extension__bg-grey {
+    background: radial-gradient(#fff, #eee);
+    overflow-y: hidden;
+}
+
+.wrapper {
+    width: 500px;
+    background-color: #dcdde3;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 12px;
+    height: auto;
+}
+
+.extension__logo {
+    position: relative;
+    display: block;
+    width:38px;
+    height: auto;
+}
+
+.extension__logo--image {
+    display: block;
+    width: 38px;
+    height: auto;
+    margin-top: 3px;
+    opacity: .9;
+    margin-left: 3px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-75%, -50%);
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -webkit-transform: translateY(0);
+    }
+
+    40% {
+        -webkit-transform: translateY(-30px);
+    }
+
+    60% {
+        -webkit-transform: translateY(-15px);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.bounce {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+}
+
+
+.extension {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+.extension__wrap {
+    position: absolute;
+    max-width: 600px;
+    top: 50%;
+    margin: auto;
+    margin-top: -200px;
+    left: 20px;
+    right: 20px;
+}
+
+.extension__form {
+    display: flex;
+}
+
+.extension__input {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: 0.3s;
+    background-color: #f0f0f5;
+    border: 1px solid #1a1d40;
+    border-right: none;
+    border-radius: 100px 0 0 100px;
+    padding-right: 16px;
+    padding-left: 16px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+
+.extension__form:focus-within .extension__input {
+    box-shadow: -0.2rem 0 0 0.2rem rgba(0, 123, 255, 0.25) !important;
+}
+
+.extension__form:focus-within .extension__search-btn {
+    box-shadow: 0.2rem 0 0 0.2rem rgba(0, 123, 255, 0.25) !important;
+}
+
+/*.extension__input:focus, .extension__search-btn:focus {
+    outline: none;
+    box-shadow: 0 0 8px #720dff;
+    transition: 1s;
+}*/
+
+.extension__search-btn {
+    flex: 1 0 auto;
+    height: 38px;
+    width: 46px;
+    background-color: #f0f0f5;
+    border-radius: 0 100px 100px 0;
+    border: 1px solid #1a1d40;
+    border-left: none;
+    transition: 0.3s;
+    transition-duration: 0.4s;
+}
+
+.landing__search-icon {
+    width: 28px;
+    line-height: 24px;
+    margin-left: -4px;
+    margin-top: 4px;
+    transform: rotate(90deg);
+    transition: 0.3s;
+    transition-duration: 0.4s;
+}
+
+/*@dev This can be used for a simple css loading display in the future*/
+
+.loading {
+  width: 16px;
+  height: 16px;
+  margin-top: 24px;
+  -webkit-animation: thinking-spin 1s linear infinite;
+  animation: thinking-spin 1s linear infinite;
+}
+
+@-moz-keyframes thinking-spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes thinking-spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes thinking-spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden;
+    /* Hidden by default. Visible on click */
+    margin: auto;
+    background-color: #1a1d40;
+    /* Paua background color */
+    color: #fff;
+    /* White text color */
+    text-align: center;
+    /* Centered text */
+    border-radius: 15px;
+    /* Rounded borders */
+    padding: 5px 10px;
+    position: fixed;
+    /* Sit on top of the screen */
+    z-index: 1;
+    /* Add a z-index if needed */
+    left: 10%;
+    /* Bring the snackbar closer to exodude*/
+    right: 60%;
+    top: 20px;
+    font-family: $Roboto;
+}
+
+#snackbar:after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-right-color:  #1a1d40;
+    border-left: 0;
+    border-top: 0;
+    margin-top: -3px;
+    margin-left: -8px;
+    transform: rotate(-23deg);
+}
+
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible;
+    /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#snackbar.showMulti {
+    visibility: visible;
+    cursor: pointer;
+    right: 15px;
+    top: 13px;
+    /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadeinMulti 0.5s;
+    animation: fadeinMulti 0.5s;
+}
+
+
+/* Animations to fade the snackbar in and out */
+
+@-webkit-keyframes fadeinMulti {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+
+    to {
+        top: 13px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeinMulti {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+
+    to {
+        top: 13px;
+        opacity: 1;
+    }
+}
+
+
+@-webkit-keyframes fadein {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+
+    to {
+        top: 20px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+
+    to {
+        top: 20px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        top: 20px;
+        opacity: 1;
+    }
+
+    to {
+        top: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        top: 20px;
+        opacity: 1;
+    }
+
+    to {
+        top: 0;
+        opacity: 0;
+    }
+}

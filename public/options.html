@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HelpScout SOS</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <p id="dialog-boxExodude"></p>
+    <section class="current_assignment_Exodude">
+        <form>
+            <label for="waitTimeThreshold" title="How long can a ticket wait before you're alerted">Alert Urgency</label>
+            <select id="waitTimeThreshold" class="selectorExodude" name="waitTimeThreshold" tabindex="2">
+                <option value="off" selected>Off</option>
+                <option value="3">High</option>
+                <option value="6">Elevated</option>
+                <option value="8">Low</option>
+            </select>
+        </form>
+    </section>
+    <div id="snackbar"></div>
+    <div id="animated" class="animated bounce" title="Exodude loves you">
+        <img id="falcon" src="fella.png" style="max-width:90px; height:auto;" alt="Exodude icon">
+    </div>
+    <div class="centerExodude">
+        <button id="inboxLink" style="color: white" class="button" title="Take me to Help Scout" tabindex="1">HelpScout Inbox</button>
+
+      <!--   <div class="tooltip">
+
+            <p class="tooltiptextdown" style="padding: 5px;">Toggle Popular Links</p>
+
+            <form >
+            <label  class="switch">
+                <input id="switchForm" type="checkbox" title="Toggle on short links" tabindex="3"checked>
+                <span class="slider round"></span>
+            </label>
+        </form>
+
+        </div> -->
+
+
+    </div>
+
+   <!--  <section id="linksExodude" style="width: 180px, text-align: center">
+    
+        <div class="section_heading centerExodude">Popular Links</div>
+
+        <div class="gallery centerExodude" value="Daily">
+            <div class="tooltip">
+                <span class="tooltiptext">Daily Forecast</span>
+                <a id="dailyForecast"><img src="forecast.png" class="gallery__img" alt="Daily forecast"></a>
+            </div>
+            <div class="tooltip">
+                <span class="tooltiptext">High Five Submission</span>
+                <a id="highFive"><img src="highFive.png" class="gallery__img" alt="High Five Form"></a>
+            </div>
+            <div class="tooltip">
+                <span class="tooltiptext">Support Handbook</span>
+                <a id="handbook"><img src="smsaHandbook.png" class="gallery__img" alt="Smsa Handbook"></a>
+            </div>
+            <div class="tooltip">
+                <span class="tooltiptext">Feedback Form</span>
+                <a id="feedbackForm"><img src="form.png" class="gallery__img" alt="feedback form"></a>
+            </div>
+        </div>
+   
+    </section> -->
+
+    <script src="options.js"></script>
+</body>
+
+</html>
