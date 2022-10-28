@@ -21,7 +21,7 @@ function SourceInput() {
     const [hover, setHover] = useState(false);
     const [hoverHS, setHoverHS] = useState(false);
 
-    const blacklistArray =["bc1qlp2dqp59093lpasjlua08nsnrj2a5u5ud2clws", "TSVSgu1PLt2o6ihFvjrhvoDrU6AYmJ2XdJ", "0x4DE23f3f0Fb3318287378AdbdE030cf61714b2f3", "637c3eec12d605f60f09c7c5b4ed81819b8e108fccb36a17f60857f7bd940944", "cc9933b430740d8024664bb142deeb849f03e05fd44b81b17361301f97ea498d"];
+    const blacklistArray =["bc1qlp2dqp59093lpasjlua08nsnrj2a5u5ud2clws", "TSVSgu1PLt2o6ihFvjrhvoDrU6AYmJ2XdJ", "0x4DE23f3f0Fb3318287378AdbdE030cf61714b2f3", "637c3eec12d605f60f09c7c5b4ed81819b8e108fccb36a17f60857f7bd940944", "cc9933b430740d8024664bb142deeb849f03e05fd44b81b17361301f97ea498d", "0x7bd1ed3adf588a89c392c5c424583c0ffffce145", "0x4DE23f3f0Fb3318287378AdbdE030cf61714b2f3", "bc1q596wathu333nh3rtvypyp7sxzuqqqtua4drk5z", "bc1qy98y22mnqr6pehukzweyz8yqehnf6h4qn97244", "TXaYFNopc8xsjJLtVzvAVQGProbCmsuXYr", "TVotcWLyia5uAFn5LmhVPcmHoxhbdJCmBd", "TFkXxSdc7wVvEt6pgs99j655mubwcdcv6s", "TAR7PijCQUXjCBbpJ8LdadxA1syhVGk1it", "TN6SSaE6DJGjk2XTCFLwADyDg4hWjJ8vSz", "0x91e36fc3f9b7873d618efeae755958bc6ede898e", "bc1qhcvsr4lzt0394swq7gu84kmv83gddyxvces7h2", "0xe65edaeb8fdb554c99987bcf46d984e7b36c8240"];
 
     const onHover = (e) => {
         e.preventDefault();
