@@ -55,7 +55,7 @@ function notifyExo(id, title, message, requireInteraction = false) {
 //@dev If tab matching URL is open, the notice will focus on that tab (regardless of window). Else, it will open new unassigned tab. 
 
 async function openUnassigned() {
-    let query = { url: 'https://secure.helpscout.net/mailbox/4c021305e6c95617/*' };
+    let query = { url: 'https://secure.helpscout.net/*' };
     let tabs = await chrome.tabs.query(query);
 
     //@dev you can put the unassigned tab finder method and use the array in conditions to replace the else statement condition. 

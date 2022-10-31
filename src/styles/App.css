@@ -363,6 +363,18 @@ label {
     animation: fadeinMulti 0.5s;
 }
 
+#snackbar.showMultiScam {
+    visibility: visible;
+    font-size: 13px;
+    cursor: pointer;
+    right: 15px;
+    top: 12px;
+    /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadeinMultiScam 0.5s;
+    animation: fadeinMultiScam 0.5s;
+}
 
 /* Animations to fade the snackbar in and out */
 
@@ -390,6 +402,29 @@ label {
     }
 }
 
+@-webkit-keyframes fadeinMultiScam {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+
+    to {
+        top: 12px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeinMultiScam {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+
+    to {
+        top: 12px;
+        opacity: 1;
+    }
+}
 
 @-webkit-keyframes fadein {
     from {
@@ -429,7 +464,7 @@ label {
 
 @keyframes fadeout {
     from {
-        top: 20px;
+        top:20px;
         opacity: 1;
     }
 

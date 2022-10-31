@@ -10,6 +10,7 @@ import gear from "./gear-solid.svg";
 import Results from "./Results.js";
 import getAlgoData from "./algoTx.js";
 import hsIcon from "./help-scout-logo-square.png";
+import checkMalicious from './checkMalicious.js';
 //import verifyTezTx from './tezTx.js'; //@dev Not neccessary at the moment.
 
 function SourceInput() {
@@ -21,7 +22,6 @@ function SourceInput() {
     const [hover, setHover] = useState(false);
     const [hoverHS, setHoverHS] = useState(false);
 
-    const blacklistArray =["bc1qlp2dqp59093lpasjlua08nsnrj2a5u5ud2clws", "TSVSgu1PLt2o6ihFvjrhvoDrU6AYmJ2XdJ", "0x4DE23f3f0Fb3318287378AdbdE030cf61714b2f3", "637c3eec12d605f60f09c7c5b4ed81819b8e108fccb36a17f60857f7bd940944", "cc9933b430740d8024664bb142deeb849f03e05fd44b81b17361301f97ea498d", "0x7bd1ed3adf588a89c392c5c424583c0ffffce145", "0x4DE23f3f0Fb3318287378AdbdE030cf61714b2f3", "bc1q596wathu333nh3rtvypyp7sxzuqqqtua4drk5z", "bc1qy98y22mnqr6pehukzweyz8yqehnf6h4qn97244", "TXaYFNopc8xsjJLtVzvAVQGProbCmsuXYr", "TVotcWLyia5uAFn5LmhVPcmHoxhbdJCmBd", "TFkXxSdc7wVvEt6pgs99j655mubwcdcv6s", "TAR7PijCQUXjCBbpJ8LdadxA1syhVGk1it", "TN6SSaE6DJGjk2XTCFLwADyDg4hWjJ8vSz", "0x91e36fc3f9b7873d618efeae755958bc6ede898e", "bc1qhcvsr4lzt0394swq7gu84kmv83gddyxvces7h2", "0xe65edaeb8fdb554c99987bcf46d984e7b36c8240"];
 
     const onHover = (e) => {
         e.preventDefault();
@@ -45,6 +45,68 @@ function SourceInput() {
     const HoverData = "Options Page";
     const HoverDataTwo = "Go to Inbox";
 
+const maliciousArray = [
+    '0x7bd1ed3adf588a89c392c5c424583c0ffffce145',
+    '0x4DE23f3f0Fb3318287378AdbdE030cf61714b2f3',
+    'bc1qr6ra3pr56r5ha37pvz5g5xrk4q66hu86jsptyv',
+    'bc1q596wathu333nh3rtvypyp7sxzuqqqtua4drk5z',
+    'bc1qy98y22mnqr6pehukzweyz8yqehnf6h4qn97244',
+    'TXaYFNopc8xsjJLtVzvAVQGProbCmsuXYr',
+    'TVotcWLyia5uAFn5LmhVPcmHoxhbdJCmBd',
+    'TFkXxSdc7wVvEt6pgs99j655mubwcdcv6s',
+    'TAR7PijCQUXjCBbpJ8LdadxA1syhVGk1it',
+    'TN6SSaE6DJGjk2XTCFLwADyDg4hWjJ8vSz',
+    '0x09eb9ed064594de81c5b95a10ca565147a9e3f32',
+    '0x91e36fc3f9b7873d618efeae755958bc6ede898e',
+    'bc1qhcvsr4lzt0394swq7gu84kmv83gddyxvces7h2',
+    'rnT25PNPRoGGutThwQtR13DZ9iCn4egnn3',
+    '0x118A52F44a9a7c8D526436CBbC38bD49C7Db0426',
+    '34U9ZtH4JpddoZKnmt4ZLaK9aWo5AXWEfU',
+    'bc1qk7xml2px86eg339nh3m94qj84c2mgf48rnw8lz',
+    '0xAaB910ACDD01AF491179Bb7c91A56080F764c8E1',
+    '0x002c16040b2f42fcb23dfecd5566ffbdd9865f6f',
+    '0xe64ad42e9ed6135b504f4c29ffe9d3a187bc14e2',
+    'TGQHGNuPA5XUX3DoaQHe2JegbZvKDjcrCb',
+    'bnb1pma22amrcdztf93t4ynp4jzq6llpqlthualgr3',
+    'RMKRCe88sJZxNKPRRBePP6AV2i6Pk2VXfF',
+    'addr1q879x08md82k5zn526eleqwfwf6fw0fczctm7ns6h2nl4wmyjerk76a8u422508yut5nqqg6mmgczcygq8yhdvtxsheswvgtnz',
+    'addr1q9x5m26aup77g3gta8vmd6vqkavlxapyzxg6zdp5wu2ur4nyjerk76a8u422508yut5nqqg6mmgczcygq8yhdvtxshes85s03l',
+    '0xc663d040146b21fe6dbfa9be228f44ced02c0735',
+    'bc1qykyq6ngdne5anch2zypmvgcpxwjrez97yccxe0',
+    '0.0.985817',
+    'AJ1shZYBxnSsuCNE8FoRtvdAT8jtX7ahQJayeHxbKwtk',
+    '1e8w1oXJwCx4eFiCFxEFpfu38ne3MG7CuLrJGzUXhYr2tbL',
+    'bc1q6wusy8vffy03ty8gc3qm9h4ve89k32rnknkla6',
+    'bc1qttxylp3g4r248qmv6cwwq82z0a34dmqa3sjjfs',
+    'addr1q9cush3ruaupkg2tu8xeavpvhmw33c9nh7sgax3nsdma53prdmxc8w7z66sdd685swrr56kv97trmxmzt74gmhh7tqyqsnvtee',
+    '0x45d59b12221752e65c77b4bde118adb1dca69668',
+    'bc1qkc8puvcga4qhqc9gtmy566np4wphlkev93sngq',
+    '0x3be343277d6b3a6733c28c098fef3d64adae5819',
+    'GC2UATGZLSKPZ5PA3P2XLNYWD3BW6JTNSZR5IZGLKRZXCM53CHSLFNAS',
+    'DTZb1xaQac5jsVy8CqWo1T4zzmBVotYtG5',
+    '0xbd38643b5077f469ea7b40f151bc385f6abe46b6',
+    'addr1q9yupzxmzyhjwa6993arpfrh7xkjwzvknmdpyyxvul5l295awga34304dayq6mgrzycz8pvd7u0kdscjehgt0vkjjuvselayqx',
+    '0x29f29f8281e0c9bb5355e365ce698cd08b535fa4',
+    '1FdnbsoouVffg8dEqTeYY6ebcLdtMP3PJe',
+    '0xe65edaeb8fdb554c99987bcf46d984e7b36c8240',
+    'ltc1qxdq9kas5lfwhqe4mujllck6pygdrpl09nfuuuj',
+    '0x39F6a6C85d39d5ABAd8A398310c52E7c374F2bA3',
+    'bc1qfx3ewtpkw62f4vnj228phccu7d7decdxpj8kxn',
+    '13i44XzgjeG7HD24dprX2zdrKkS8CNiJoY',
+    '0x9c4ab5727c76563f8c386c3e78672b4f9cdbde5b',
+    '0x91eee58069C61cC9080964616A0Bd54a29e5D74B',
+    'bc1que35aggdmzaq4khzucczlhqxaqqxrj0nl5qvpt',
+    'rEXzpuLshGdF8KNcr5GkZihSCJX7yEaJXT',
+    '1Q2Za34Ub95tNowFTcqV1uUva5ikJhLSak',
+    'ltc1qxk7dvnv384lvw23wfsm9cptlwjsp2h6zpjls6c',
+    'LdQDaHyKiVwUSXU1ZNynwMCkkYAy4weSDD',
+    'addr1qxddgrnyrk74d6tw8dvzph79mtk6z3uvvf2h7dhskqf889tyjerk76a8u422508yut5nqqg6mmgczcygq8yhdvtxshesc86rd2',
+    "bc1qlp2dqp59093lpasjlua08nsnrj2a5u5ud2clws",
+    "TSVSgu1PLt2o6ihFvjrhvoDrU6AYmJ2XdJ",
+    "637c3eec12d605f60f09c7c5b4ed81819b8e108fccb36a17f60857f7bd940944",
+    "cc9933b430740d8024664bb142deeb849f03e05fd44b81b17361301f97ea498d"
+];
+
     //@dev Used for populating UI response from Exodude image on popup when empty string is searched.
     const emojis = [
         "✌️ Enter query",
@@ -59,6 +121,8 @@ function SourceInput() {
         "🌈 Enter search",
         "✨ Shiny searches",
         "💫 Find a tx here",
+        "🍗 Feed me queries",
+        "🔎 Searching?"
     ];
     const getRandomEmoji = () => {
         return emojis[~~(Math.random() * emojis.length)];
@@ -82,6 +146,7 @@ function SourceInput() {
                     "https://atomscan.com/transactions/" + source,
                     "https://xrpscan.com/tx/" + source,
                     "https://cardanoscan.io/transaction/" + source,
+                    "https://finder.terra.money/classic/tx/" + source,
                 ];
                 chrome.windows.create({
                     focused: false,
@@ -109,7 +174,7 @@ function SourceInput() {
     const moneroText = async (source) => {
         var snackbar = await document.getElementById("snackbar");
         snackbar.innerText =
-            "This looks like a Monero address, which you cannot view on an explorer ususally 🔍 Click this dialogue to open a new tab anyways.";
+            "This looks like a Monero address, which you cannot view on an explorer usually 🔍 Click this dialogue to open a new tab anyways.";
         snackbar.className = "showMulti";
         snackbar.style.right = "15px";
 
@@ -123,45 +188,6 @@ function SourceInput() {
         );
     };
 
-
-     const blacklistText = async (source) => {
-        var snackbar = await document.getElementById("snackbar");
-        snackbar.innerText =
-            "This looks like a black-listed address/TX 🛑 Click this dialogue to proceed with new window. Click me to reset.";
-        snackbar.className = "showMulti";
-        snackbar.style.right = "15px";
-
-        snackbar.addEventListener(
-            "click",
-            function (event) {
-                let urlArray = [
-                    "https://blockchair.com/search?q=" + source,
-                    "https://tronscan.org/#/transaction/" + source,
-                    "https://tronscan.org/#/address/" + source,
-                    "https://etherscan.io/address/" + source
-                ];
-                chrome.windows.create({
-                    focused: false,
-                    state: "minimized",
-                    url: urlArray,
-                });
-                snackbar.innerText = "I opened a new, minimized window 👀";
-                snackbar.className = snackbar.className.replace(
-                    "showMulti",
-                    "show"
-                );
-                snackbar.style.right = "45%";
-                setTimeout(function () {
-                    snackbar.className = snackbar.className.replace("show", "");
-                    snackbar.style.right = snackbar.style.right.replace(
-                        "45%",
-                        "60%"
-                    );
-                }, 1500);
-            },
-            { once: true }
-        );
-    };
 
     //@dev Opens options page from gear icon.
     const optionsPage = (event) => {
@@ -195,12 +221,12 @@ function SourceInput() {
                     }
                 });
             });
-            if (found == false) {
+            if (found === false) {
                 chrome.tabs.create({
                     active: true,
                     url: "https://secure.helpscout.net/mailbox/4c021305e6c95617/",
                 });
-            } else if (focusedTab == currentTab) {
+            } else if (focusedTab === currentTab) {
                 var snackbar = document.getElementById("snackbar");
                 snackbar.innerText = "You're currently on HelpScout 😎";
                 snackbar.style.right = "30%";
@@ -247,6 +273,9 @@ function SourceInput() {
         var snackbar = document.getElementById("snackbar");
         snackbar.innerText = "🔍 Searching now...";
         snackbar.className = "show";
+        setTimeout(function (){
+            snackbar.className = snackbar.className.replace("show", "");
+        }, 60000);
     }
 
     function getTimeTitle() {
@@ -272,7 +301,11 @@ function SourceInput() {
     }
 
     const search = async () => {
-        let source = await document.getElementById("sourceInput").value;
+
+        let inputValue = await document.getElementById("sourceInput").value;
+
+        let source = await inputValue.trim();
+
         console.log(source.length);
 
         loading();
@@ -284,8 +317,8 @@ function SourceInput() {
             setTimeout(function () {
                 snackbar.className = snackbar.className.replace("show", "");
             }, 800);
-        } else if (blacklistArray.indexOf(source) > -1) {
-            await blacklistText(source);
+        } else if (maliciousArray.indexOf(source) > -1) {
+            await checkMalicious(source);
         } else if (/^\s*[0-9a-z\sA-Z]{3,9}\s*$/gi.test(source)) {
             //@dev Match asset ticker or crypto name search to populate iframe.
             let noSpaceSource = await source.replace(/\s/g, "");
@@ -298,7 +331,7 @@ function SourceInput() {
         } else if (/^[A-Z2-7]{58}$/g.test(source)) {
             //@dev Placeholder for Algo address
             await existingTabCheck("https://algoexplorer.io/address/", source);
-        } else if (await getAlgoData(source)) {
+        } else if (await getAlgoData(source) && source.length === 52) {
             //@dev Placeholder for Algo TX. Regex -> /^[A-Z2-7]{52}$/g.test(source)
             await existingTabCheck("https://algoexplorer.io/tx/", source);
         } else if (/^0x[a-fA-F0-9]{40}$/g.test(source)) {
@@ -357,6 +390,9 @@ function SourceInput() {
         ) {
             //@dev Ada addresses
             await existingTabCheck("https://cardanoscan.io/address/", source);
+        } else if (/^(terra1)[a-z0-9A-Z]{38}$/g.test(source)) {
+            //@dev Lunc address search.
+            await existingTabCheck("https://finder.terra.money/classic/address/", source);
         } else if (
             /^grs[a-zA-Z0-9]{5,88}$|^F[a-km-zA-HJ-NP-Z1-9]{26,33}$|^G[A-Z0-9]{55}$|^ltc[a-zA-Z0-9]{5,88}$|^[LM][a-km-zA-HJ-NP-Z1-9]{26,33}$|^[7X][a-km-zA-HJ-NP-Z1-9]{26,33}$|^[9AD][a-km-zA-HJ-NP-Z1-9]{26,33}$|^([qp][qpzry9x8gf2tvdw0s3jn54khce6mua7l]{40,120}|(bitcoincash)?[qp][qpzry9x8gf2tvdw0s3jn54khce6mua7l]{40,120})$|^bc(0([ac-hj-np-z02-9]{39}|[ac-hj-np-z02-9]{59})|1[ac-hj-np-z02-9]{8,87})$|^1[a-km-zA-HJ-NP-Z1-9]{25,34}(?!\/)$|^3[a-km-zA-HJ-NP-Z1-9]{25,34}$/g.test(
                 source
@@ -365,7 +401,7 @@ function SourceInput() {
             //@dev Most chains addresses. Needs to stay last so other regex's work. Includes LTC, XLM, DASH, DOGE, XMR, BCH and BTC derivations.
             await existingTabCheck("https://blockchair.com/search?q=", source);
         } else if (/^\s*[0-9a-fA-F]{64}\s*$/g.test(source)) {
-            //@dev Transaction Window for Multiple chains (So far: Tron, ATOM, UTXOs, BNB beacon chain, XRP, ADA)
+            //@dev Transaction Window for Multiple chains (So far: Tron, ATOM, UTXOs, BNB beacon chain, XRP, ADA, LUNC)
             let noSpaceSourceM = await source.replace(/\s/g, "");
             lookUpText(noSpaceSourceM);
         } else {

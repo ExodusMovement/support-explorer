@@ -17,6 +17,15 @@ Build with `npm run build`
 
 (After build) Open chrome://extensions or brave://extension and upload the unpacked extension. 
 
+
+## Updating malicious address array: 
+
+- Utilize this spreadsheet to pull new addresses: https://docs.google.com/spreadsheets/d/1aAAPyrZgfJcWelhLr3RgGU5qS5Epwa2HhBbGNXrfh74/edit#gid=0
+  
+- Update the `checkMalicious.js` component under `src` > `components` and update the dictionary found there. 
+- Update the `SourceInput.js` array `maliciousArray` with the same address, without details. 
+
+
 ## Use Case
 
 See this section of Coda for reference: https://coda.io/d/Customer-Support-Hackathon_deARNEw7ms9/Browser-Extension-Support-Tool_suYtf#_luH-i.
@@ -50,3 +59,109 @@ Can be configured within the Support Explorer options page and now displays a co
 
 - Jamie M.
 - Scott L. 
+
+## Chains and Assets Searchable:
+
+Assets searchable: All supported on Coinranking. 
+
+EVM Address (DeBank) - 37 Chains
+
+	Ethereum
+	BNB Smart Chain
+	Polygon
+	Gnosis
+	Fantom
+	OKC
+	HECO
+	Avalanche
+	Arbitrum
+	Optimism
+	Celo
+	Moonriver
+	Cronos
+	Boba
+	Metis
+	BTTC
+	Aurora
+	Moonbeam
+	smartBCH
+	Harmony
+	Fuse
+	Astar
+	Palm
+	Shiden
+	Klaytn
+	RSK
+	IoTeX
+	KCC
+	Wanchain
+	Songbird
+	Evmos
+	DFK
+	Telos
+	Swimmer
+	Arbitrum Nova
+	Canto
+	Dogechain
+	
+	
+	
+EVM Transactions (Blockscan) - 12 chains
+	
+	Ethereum
+	Beacon Chain
+	BNB Smart Chain
+	Fantom
+	Optimism
+	Polygon
+	Arbitrum
+	Moonbeam
+	Moonriver
+	Avalanche
+	Cronos
+	BTTC
+	
+Layer 1 Address & Transactions (Blockchair) - 17 chains
+	
+	Bitcoin
+	Litecoin
+	Cardano
+	XRP
+	Polkadot
+	Dogecoin
+	Bitcoin Cash
+	Stellar
+	Monero
+	EOS
+	Kusama
+	Bitcoin SV
+	eCash
+	Zcash
+	Dash
+	Mixin
+	Groestlcoin
+	
+	
+	Other L1’s identified through regex or direct interface with blockchain:
+	
+	Addresses - Algo, Tezos, Solana, Tron, Hedera, Atom, BNB Beacon 
+	
+	Transactions - Algo, Tezos, Solana, Tron, Hedera, Atom, BNB Beacon, 
+	
+	
+	
+Running total:
+	
+Addresses - 
+		37 @ Debank (EVMs)
+		17 @ Blockchair
+		7 Individual
+		—---
+		61
+	
+Transactions - 
+		12 @ Blockscan (EVMs)
+		17 @ Blockchair
+		7 Individual
+		—---
+		36

@@ -21,7 +21,7 @@
 
  "content_scripts": [
     {
-       "matches": ["https://secure.helpscout.net/mailbox/4c021305e6c95617/*", "https://secure.helpscout.net/*"],
+      "matches": ["https://secure.helpscout.net/mailbox/4c021305e6c95617/*", "https://secure.helpscout.net/*"],
       "run_at": "document_idle",
       "css": ["popup.css"],
       "js": [
