@@ -393,6 +393,9 @@ const maliciousArray = [
         } else if (/^(terra1)[a-z0-9A-Z]{38}$/g.test(source)) {
             //@dev Lunc address search.
             await existingTabCheck("https://finder.terra.money/classic/address/", source);
+        } else if (/^R[A-Z0-9a-z]{33}$/g.test(source)){
+            //@dev RVN address search
+            await existingTabCheck("https://rvnblockexplorer.com/address/", source);
         } else if (
             /^grs[a-zA-Z0-9]{5,88}$|^F[a-km-zA-HJ-NP-Z1-9]{26,33}$|^G[A-Z0-9]{55}$|^ltc[a-zA-Z0-9]{5,88}$|^[LM][a-km-zA-HJ-NP-Z1-9]{26,33}$|^[7X][a-km-zA-HJ-NP-Z1-9]{26,33}$|^[9AD][a-km-zA-HJ-NP-Z1-9]{26,33}$|^([qp][qpzry9x8gf2tvdw0s3jn54khce6mua7l]{40,120}|(bitcoincash)?[qp][qpzry9x8gf2tvdw0s3jn54khce6mua7l]{40,120})$|^bc(0([ac-hj-np-z02-9]{39}|[ac-hj-np-z02-9]{59})|1[ac-hj-np-z02-9]{8,87})$|^1[a-km-zA-HJ-NP-Z1-9]{25,34}(?!\/)$|^3[a-km-zA-HJ-NP-Z1-9]{25,34}$/g.test(
                 source
