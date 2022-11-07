@@ -35,7 +35,7 @@ See this section of Coda for reference: https://coda.io/d/Customer-Support-Hacka
 
 ### Address & Transaction Explorer
 
-Opening the extension UI with Cmd+Shift+k (ctrl+shift+k on Windows), CSE's can quickly search for addresses on 61 blockchains and transactions on 31.
+Opening the extension UI with Cmd+J (Ctrl+J on Windows), CSE's can quickly search for addresses on 61 blockchains and transactions on 31.
 
 If a valid address/transaction has been entered, a new tab will be opened with the correct block explorer and address/transaction information.
 
