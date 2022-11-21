@@ -81,28 +81,43 @@ const checkKbArticle = async () => {
 
     //clean html
     document.getElementById('docCleaner').addEventListener('click', cleanKbDoc)
+    document.getElementById('replaceUrl').addEventListener('click', replaceUrl)
 
     checkDocErrors()
   }
 }
 
 const checkDocErrors = async function () {
+  // Get article textarea
   const text = await document.getElementsByTagName('textarea')[0].value
+
+  // Check errors
   const keychainCount = (text.match(/class="keychainify-checked"/g) || []).length
   const nbspCount = (text.match(/&nbsp;/g) || []).length
+  const urlCount =  (text.match(/support.exodus.com/g) || []).length
+
+  // Insert error count in Toolkit
   const keychains = document.getElementById('keychains')
   const nbsps = document.getElementById('nbsps')
+  const urls = document.getElementById('oldUrls')
   keychains.innerHTML = keychainCount
   nbsps.innerHTML = nbspCount
+  urls.innerHTML = urlCount
 }
 
 const cleanKbDoc = function () {
-  //Loop through all elements
   const text = document.getElementsByTagName('textarea')[0].value
 
   let removedKeychain = text.replace(/class="keychainify-checked"/g, '')
   let removedNbsp = removedKeychain.replace(/&nbsp;/g, ' ')
   document.getElementsByTagName('textarea')[0].value = removedNbsp
+}
+
+const replaceUrl = function(){
+  const text = document.getElementsByTagName('textarea')[0].value
+
+  let repUrl = text.replace(/support.exodus.com/g, 'exodus.com/support')
+  document.getElementsByTagName('textarea')[0].value = repUrl
 }
 
 const toggleKbToolkit = function () {

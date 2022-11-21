@@ -286,82 +286,84 @@ const toolkitUi = `
 <div id='kbToggler' style='width: 100%; display:flex; justify-content:center;'>
   <button id='kbTogglerButton' style='position:fixed; bottom:15px; width:200px; color:white; background-color:#0771e3; border-radius:5px;'>Open KB Toolkit</button>
 
-  <div id='kbToolkitContainer' style='width:250px; height:680px; padding:5px; border-radius:5px; border:1px solid #0771e3; background-color:#fafafa; display:none; position:fixed; bottom:50px; z-index:999; box-shadow:4px 4px 7px #888888'>
+  <div id='kbToolkitContainer' style='font-size:11px; width:250px; height:589px; padding:5px; border-radius:5px; border:1px solid #0771e3; background-color:#fafafa; display:none; position:fixed; bottom:50px; z-index:999; box-shadow:4px 4px 7px #888888'>
     <div id='kbToolkitTitle' style='margin-left:10px; margin-bottom:10px; margin-top:10px;'>
-      <h2>KB Toolkit</h2>
+      <span style='font-size:12px; font-weight:bold'>KB Toolkit</span>
     </div>
 
-    <div id='textTitle' style='margin-top:15px; margin-left:10px;'>
-      <h5>Text</h5>
+    <div id='textTitle' style='margin-top:7px; margin-left:10px;'>
+      <span style='font-size:12px; font-weight:bold'>Text</span>
     </div>
-    <div style='padding-left:5px; padding-top:10px;'>
-      <button id='kb-b' class='sidebar-button' style='margin:0px 0px 5px 5px; background-color:#209bab; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Bold</button>
-      <button id='kb-i' class='sidebar-button' style='margin:0px 0px 5px 5px; background-color:#122080; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Italic</button>
-      <button id='kb-bi' class='sidebar-button' style='margin:0px 0px 5px 5px; background-color:#601280; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Bold and Italic</button>
-    </div>
-
-    <div id='elementsTitle' style='margin-top:15px; margin-left:10px;'>
-      <h5>Elements</h5>
-    </div>
-    <div style='padding-left:5px; padding-top:10px;'>
-      <button id='kb-p' class='sidebar-button' style='margin:0px 0px 5px 5px; background-color:#eb4034; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Paragraph</button>
-      <button id='kb-li' class='sidebar-button' style='margin:0px 0px 5px 5px; background-color:#32a852; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>List item</button>
-      <button id='kb-ll' class='sidebar-button' style='margin:0px 0px 5px 5px; background-color:#8132a8; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>List link</button>
-      <button id='kb-ul' class='sidebar-button' style='margin:0px 0px 5px 5px; background-color:#a88132; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Unordered list</button>
-      <button id='kb-device' class='sidebar-button' style='margin:0px 0px 5px 5px; background-color:#209bab; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Device list</button>
-      <button id='kb-table' class='sidebar-button' style='margin:0px 0px 5px 5px; background-color:#fcba03; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Table</button>
-      <button id='kb-spanish' class='sidebar-button' style='margin:0px 0px 5px 5px; background-color:#300fbf; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Spanish link</button>
+    <div style='padding-left:5px; padding-top:5px;'>
+      <button id='kb-b' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#209bab; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Bold</button>
+      <button id='kb-i' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#122080; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Italic</button>
+      <button id='kb-bi' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#601280; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Bold and Italic</button>
     </div>
 
-    <div id='descriptionListTitle' style='margin-top:15px; margin-left:10px'>
-      <h5>Description list</h5>
+    <div id='elementsTitle' style='margin-top:7px; margin-left:10px;'>
+      <span style='font-size:12px; font-weight:bold'>Elements</span>
     </div>
-    <div style='padding-left:5px; padding-top:10px;'>
-    <button id='kb-dl' class='sidebar-button' style='margin:0px 0px 5px 5px; background-color:#1e4b75; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Description list</button>
-    <button id='kb-ds' class='sidebar-button' style='margin:0px 0px 5px 5px; background-color:#eb4034; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>New Step</button>
-    </div>
-
-    <div id='mediaTitle' style='margin-top:15px; margin-left:10px'>
-      <h5>Media</h5>
-    </div>
-    <div style='padding-left:5px; padding-top:10px;'>
-      <button id='kb-img' class='sidebar-button' style='margin:0px 0px 5px 5px; background-color:#300fbf; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Image</button>
-      <button id='kb-loom' class='sidebar-button' style='margin:0px 0px 5px 5px; background-color:#8132a8; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Loom video</button>
-      <button id='kb-youtube' class='sidebar-button' style='margin:0px 0px 5px 5px; background-color:#ed0000; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>YouTube video</button>
-      <button id='kb-class-mobile' class='sidebar-button' style='margin:0px 0px 5px 5px; background-color:#209bab; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Mobile img class</button>
+    <div style='padding-left:5px; padding-top:5px;'>
+      <button id='kb-p' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#eb4034; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Paragraph</button>
+      <button id='kb-li' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#32a852; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>List item</button>
+      <button id='kb-ll' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#8132a8; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>List link</button>
+      <button id='kb-ul' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#a88132; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Unordered list</button>
+      <button id='kb-device' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#209bab; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Device list</button>
+      <button id='kb-table' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#fcba03; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Table</button>
+      <button id='kb-spanish' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#300fbf; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Spanish link</button>
     </div>
 
-    <div id='sectionTitle' style='margin-top:15px; margin-left:10px'>
-      <h5>Sections</h5>
+    <div id='descriptionListTitle' style='margin-top:7px; margin-left:10px'>
+      <span style='font-size:12px; font-weight:bold'>Description list</span>
     </div>
-    <div style='padding-left:5px; padding-top:10px;'>
-      <button id='kb-toc' class='sidebar-button' style='margin:0px 0px 5px 5px; background-color:#a88132; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>TOC</button>
-      <button id='kb-h2' class='sidebar-button' style='margin:0px 0px 5px 5px; background-color:#0771e3; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>H2</button>
-      <button id='kb-h3' class='sidebar-button' style='margin:0px 0px 5px 5px; background-color:#eb4034; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>H3</button>
-      <button id='kb-h4' class='sidebar-button' style='margin:0px 0px 5px 5px; background-color:#32a852; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>H4</button>
+    <div style='padding-left:5px; padding-top:5px;'>
+    <button id='kb-dl' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#1e4b75; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Description list</button>
+    <button id='kb-ds' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#eb4034; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>New Step</button>
     </div>
 
-    <div id='calloutTitle' style='margin-top:15px; margin-left:10px'>
-      <h5>Callouts</h5>
+    <div id='mediaTitle' style='margin-top:7px; margin-left:10px'>
+      <span style='font-size:12px; font-weight:bold'>Media</span>
     </div>
-    <div style='padding-left:5px; padding-top:10px;'>
-      <button id='kb-cy' class='sidebar-button' style='margin:0px 0px 5px 5px; background-color:#d4ce2f; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Yellow</button>
-      <button id='kb-cr' class='sidebar-button' style='margin:0px 0px 5px 5px; background-color:#d62a1e; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Red</button>
-      <button id='kb-cg' class='sidebar-button' style='margin:0px 0px 5px 5px; background-color:#77c276; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Green</button>
-      <button id='kb-cb' class='sidebar-button' style='margin:0px 0px 5px 5px; background-color:#76a1c2; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Blue</button>
-      <button id='kb-12-word' class='sidebar-button' style='margin:0px 0px 5px 5px; background-color:#d62a1e; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>12-word phrase</button>
-      <button id='kb-pr-keys' class='sidebar-button' style='margin:0px 0px 5px 5px; background-color:#d62a1e; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Private keys</button>
+    <div style='padding-left:5px; padding-top:5px;'>
+      <button id='kb-img' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#300fbf; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Image</button>
+      <button id='kb-loom' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#8132a8; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Loom video</button>
+      <button id='kb-youtube' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#ed0000; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>YouTube video</button>
+      <button id='kb-class-mobile' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#209bab; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Mobile img class</button>
     </div>
 
-    <div id='errorsContainer' style='background-color:#ededed; width:100%; padding:10px 0px 10px 0px; border-radius:5px; margin-top:20px;'>
+    <div id='sectionTitle' style='margin-top:7px; margin-left:10px'>
+      <span style='font-size:12px; font-weight:bold'>Sections</span>
+    </div>
+    <div style='padding-left:5px; padding-top:5px;'>
+      <button id='kb-toc' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#a88132; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>TOC</button>
+      <button id='kb-h2' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#0771e3; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>H2</button>
+      <button id='kb-h3' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#eb4034; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>H3</button>
+      <button id='kb-h4' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#32a852; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>H4</button>
+    </div>
+
+    <div id='calloutTitle' style='margin-top:7px; margin-left:10px'>
+      <span style='font-size:12px; font-weight:bold'>Callouts</span>
+    </div>
+    <div style='padding-left:5px; padding-top:5px;'>
+      <button id='kb-cy' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#d4ce2f; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Yellow</button>
+      <button id='kb-cr' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#d62a1e; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Red</button>
+      <button id='kb-cg' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#77c276; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Green</button>
+      <button id='kb-cb' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#76a1c2; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Blue</button>
+      <button id='kb-12-word' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#d62a1e; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>12-word phrase</button>
+      <button id='kb-pr-keys' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#d62a1e; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Private keys</button>
+    </div>
+
+    <div id='errorsContainer' style='background-color:#ededed; width:100%; padding:10px 0px 10px 0px; border-radius:5px; margin-top:5px;'>
       <div id='errorsTitle' style='margin-left:10px; margin-bottom:10px;'>
-        <h5>Errors</h5>
+        <span style='font-size:12px; font-weight:bold'>Errors</span>
       </div>
       <div id='errors' style='margin-left:10px'>
         <div style='margin-bottom:5px; color:gray'>Keychainify's: <span id='keychains' style='color:red'></span></div>
         <div style='margin-bottom:5px; color:gray'>Nbsp's: <span id='nbsps' style='color:red'></span></div>
+        <div style='margin-bottom:5px; color:gray'>Old URLs: <span id='oldUrls' style='color:red'></span></div>
       </div>
-      <button id='docCleaner' class='sidebar-button' style='margin-left:10px; background-color:#4287f5; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:5px;'>Clean HTML</button>
+      <button id='docCleaner' class='sidebar-button' style='font-size:11px; margin-left:10px; background-color:#4287f5; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:5px;'>Clean HTML</button>
+      <button id='replaceUrl' class='sidebar-button' style='font-size:11px; margin-left:10px; background-color:#122080; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:5px;'>Update URL</button>
     </div>
 
   </div>
