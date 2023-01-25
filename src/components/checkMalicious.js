@@ -21,7 +21,7 @@ let explorer;
 
         return message;
     }
-
+    // @dev 'Address': ["Instances", "Type", "Ticker", "Explorer"]
     const malicious = {
         '0x7bd1ed3adf588a89c392c5c424583c0ffffce145': ["19", "malware", "ETH", "https://debank.com/profile/"],
         '0x4DE23f3f0Fb3318287378AdbdE030cf61714b2f3': ["36", "scam", "ETH", "https://debank.com/profile/"],
@@ -78,10 +78,41 @@ let explorer;
         'ltc1qxk7dvnv384lvw23wfsm9cptlwjsp2h6zpjls6c': ["2", "malware", "LTC", "https://blockchair.com/search?q="],
         'LdQDaHyKiVwUSXU1ZNynwMCkkYAy4weSDD': ["2", "malware", "LTC", "https://blockchair.com/search?q="],
         'addr1qxddgrnyrk74d6tw8dvzph79mtk6z3uvvf2h7dhskqf889tyjerk76a8u422508yut5nqqg6mmgczcygq8yhdvtxshesc86rd2': ["3", "malware", "ADA", "https://blockchair.com/search?q="],
-        'bc1qlp2dqp59093lpasjlua08nsnrj2a5u5ud2clws': ["1", "undefined", "BTC", "https://blockchair.com/search?q="],
-        'TSVSgu1PLt2o6ihFvjrhvoDrU6AYmJ2XdJ': ["1", "undefined", "TRX", "https://tronscan.org/#/address/"],
-        '637c3eec12d605f60f09c7c5b4ed81819b8e108fccb36a17f60857f7bd940944': ["1", "undefined", "BTC", "https://blockchair.com/search?q="],
-        'cc9933b430740d8024664bb142deeb849f03e05fd44b81b17361301f97ea498d': ["1", "undefined", "BTC", "https://blockchair.com/search?q="]
+        '0x9eeae7b71db4885a5b015941f5a14519b02bc0fe': ["4", "malware", "ETH", "https://debank.com/profile/"],
+        'addr1qx2t250qf4xmhvtzx9nm4yn49tkg8tyfl74c3tkg7nt02333ram5d6afydpxgefrt05azh3gs2ymcd0jrv6nk6gn60qqkj2p6q': ["2", "malware", "ADA", "https://blockchair.com/search?q="],
+        'TYy2d7Wi68W5CM9r13FDRczo4mFd24uenp': ["18", "scam", "TRX", "https://tronscan.org/#/address/"],
+        '0xe5a6b9c8086dbe981cb7bc6c1390ff11775e9ac3': ["2", "unknown", "ETH", "https://debank.com/profile/"],
+        '0xad77701be0bdab4c6112f761a0ad7dc5de9e9514': ["5", "malware", "ETH", "https://debank.com/profile/"],
+        'bc1qfke32e9taum8ad2j7fravrw7hs3s0h5xw4hura': ["2", "scam", "BTC", "https://blockchair.com/search?q="],
+        '0x2dd217c15f97b3014c5046b945d9386a43e3a1e8': ["3", "unknown", "ETH", "https://debank.com/profile/"],
+        'rNygJCtF4Zh8EqZB7hmVXwNuVyu9Qqr6Yi': ["3", "unknown", "XRP", "https://blockchair.com/search?q="],
+        '0xdd0d51a516c1d4b1e26819eef388d0f32d0b9454': ["2", "unknown", "ETH", "https://debank.com/profile/"],
+        'bc1qs8x6caxpkns9szm37d8csd6ej4nr67qx3hk732': ["2", "unknown", "BTC", "https://blockchair.com/search?q="],
+        'bc1qp4jj29c6wtvfmuvd43huy4wnausdrm8fu958ue': ["3", "malware", "BTC", "https://blockchair.com/search?q="],
+        '0x74de5d4fcbf63e00296fd95d33236b9794016631': ["5", "unknown", "ETH", "https://debank.com/profile/"],
+        '0x2f62f2b4c5fcd7570a709dec05d68ea19c82a9ec': ["2", "unknown", "ETH", "https://debank.com/profile/"],
+        'addr1qymu7tjgzx0pmdeje2hcfzqkq4xyp3age52fth45rkxmg6hrgp92xydlz52kwtnajuulpk630803w3v3gph7fxns0jxsrtxn7l': ["3", "unknown", "ADA", "https://blockchair.com/search?q="],
+        'bc1qm0a45r5ew8ue3h93jw6ndrn855wwre7ymc6xv2': ["2", "unknown", "BTC", "https://blockchair.com/search?q="],
+        '0x0050b8825e02f06e56c34f7206f4cf935f648558': ["3", "scam", "ETH", "https://debank.com/profile/"],
+        '0xd6a89047dd0d47cf30c99fc36265d2266d0614d7': ["2", "malware", "ETH", "https://debank.com/profile/"],
+        'TGucfPTopNVFG4CR4wWws9qRWD1RLayiKe': ["42", "scam", "TRX", "https://tronscan.org/#/address/"],
+        '0x6c8cf1d3430b925b30a064c171bf01441333a0d5': ["2", "malware", "ETH", "https://debank.com/profile/"],
+        'TCNC6GuAmk9ut2D8yAXKfbzxvg5wvcdtWo': ["4", "malware", "TRX", "https://tronscan.org/#/address/"],
+        'addr1qx8r3duxqs3neyvytf6vjlj7h77gwhtyvy2m4ky6fs58xv9as6387khu2y2n4j5809dv89m6zw9l945v0uz7xd8aee3slev4lq': ["2", "unknown", "ADA", "https://blockchair.com/search?q="],
+        'TC5dBiA4BMuqbMdEDUpj8yvmvg3aLN8HJA': ["225", "scam", "TRX", "https://tronscan.org/#/address/"],
+        'TXTk6XF3cdQ1WCs8Ca4NG5e2BGZcHugyLd': ["84", "scam", "TRX", "https://tronscan.org/#/address/"],
+        'TLqDfzoMRzmDfcqFc5BrQpzQzRpS4F7Jf8': ["79", "scam", "TRX", "https://tronscan.org/#/address/"],
+        'TUZpdyehCxmvKht2pTNPtLYSmTJCsSKYUz': ["39", "scam", "TRX", "https://tronscan.org/#/address/"],
+        '0x44dab39ddabeb658e60943f106b41854e6d80cbb': ["2", "unknown", "ETH", "https://debank.com/profile/"],
+        'raEGV4CJZNFgJaN6QnHUbptyqpeBjUg8sZ': ["2", "unknown", "XRP", "https://blockchair.com/search?q="],
+        'TFpNbc6ruDT3anPmMeMwaimFjocRRGBDDF': ["59", "scam", "TRX", "https://tronscan.org/#/address/"],
+        'TJoPKJrSVPko5DisK1riZigj4eY1L3R1YM': ["563", "scam", "TRX", "https://tronscan.org/#/address/"],
+        'TNUhTnGfHVGHJ2iQXF8bB1adYJ72QHbtGq': ["6", "scam", "TRX", "https://tronscan.org/#/address/"],
+        'TYG3rz7gB8nj7L86BQEWXVja6UaQ4S6N29': ["50", "scam", "TRX", "https://tronscan.org/#/address/"],
+        'TKEiStJ1u4CppMHaaBjNfpWi6QdHvgprD5': ["10", "scam", "TRX", "https://tronscan.org/#/address/"],
+        'TWXQmViN2X7dmfsUebgw7BC4cd99BE2ZWt': ["51", "scam", "TRX", "https://tronscan.org/#/address/"],
+        'TWPzGEW22kUjkguNsWFxHz3skydPtXnPD7': ["80", "scam", "TRX", "https://tronscan.org/#/address/"],
+        'TCob5HQQH2A8c4HSeAJ4RZJFMv68A4ofeZ': ["64", "scam", "TRX", "https://tronscan.org/#/address/"]
     }
 
     for (let keys in malicious) {
@@ -96,10 +127,9 @@ let explorer;
 
             snackbar.addEventListener(
                 "click",
-                async function (event){
-
+                // eslint-disable-next-line no-loop-func
+                async function (){
                     await existingTabCheck(explorer, source);
-
                 }
             );
         }

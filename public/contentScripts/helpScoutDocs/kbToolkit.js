@@ -81,7 +81,8 @@ const checkKbArticle = async () => {
 
     //clean html
     document.getElementById('docCleaner').addEventListener('click', cleanKbDoc)
-    document.getElementById('replaceUrl').addEventListener('click', replaceUrl)
+    //document.getElementById('replaceUrl').addEventListener('click', replaceUrl)
+    document.getElementById('scrollTop').addEventListener('click', scrollTop)
 
     checkDocErrors()
   }
@@ -118,6 +119,10 @@ const replaceUrl = function(){
 
   let repUrl = text.replace(/support.exodus.com/g, 'exodus.com/support')
   document.getElementsByTagName('textarea')[0].value = repUrl
+}
+
+const scrollTop = function(){
+  window.scrollTo(0, 0)
 }
 
 const toggleKbToolkit = function () {

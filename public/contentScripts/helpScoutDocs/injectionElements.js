@@ -363,9 +363,17 @@ const toolkitUi = `
         <div style='margin-bottom:5px; color:gray'>Old URLs: <span id='oldUrls' style='color:red'></span></div>
       </div>
       <button id='docCleaner' class='sidebar-button' style='font-size:11px; margin-left:10px; background-color:#4287f5; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:5px;'>Clean HTML</button>
-      <button id='replaceUrl' class='sidebar-button' style='font-size:11px; margin-left:10px; background-color:#122080; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:5px;'>Update URL</button>
+      <button id='scrollTop' class='sidebar-button' style='font-size:11px; margin-left:10px; background-color:#1e4b75; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:50%; width:25px; height:25px;'>^</button>
     </div>
 
   </div>
 </div>
 `
+
+/*
+
+Button for URL replacement
+
+<button id='replaceUrl' class='sidebar-button' style='font-size:11px; margin-left:10px; background-color:#122080; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:5px;'>Update URL</button>
+
+*/
