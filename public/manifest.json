@@ -1,7 +1,7 @@
 {
   "name": "Support Explorer Tool",
   "description": "Support Explorer Tool. Search TX, address or tickers as well as receive helpscout alerts.",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "manifest_version": 3,
 
   "background": {
