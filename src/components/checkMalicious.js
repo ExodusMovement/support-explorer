@@ -19,6 +19,7 @@ let explorer;
         return message;
     }
     // @dev 'Address': ["Instances", "Type", "Ticker", "Explorer"]
+    // last update Jan 27, 2023
     const malicious = {
         '0x7bd1ed3adf588a89c392c5c424583c0ffffce145': ["19", "malware", "ETH", "https://debank.com/profile/"],
         '0x4DE23f3f0Fb3318287378AdbdE030cf61714b2f3': ["36", "scam", "ETH", "https://debank.com/profile/"],

@@ -46,6 +46,7 @@ function SourceInput() {
     const HoverData = "Options Page";
     const HoverDataTwo = "Go to Inbox";
 
+    // last update Jan 27, 2023
     const maliciousArray = [
         '0x7bd1ed3adf588a89c392c5c424583c0ffffce145',
         '0x4DE23f3f0Fb3318287378AdbdE030cf61714b2f3',
