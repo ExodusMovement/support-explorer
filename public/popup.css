@@ -1,0 +1,472 @@
+.hide{
+  visibility: hidden;
+}
+
+.reveal{
+  visibility: visible;
+}
+
+.current_assignment_Exodude {
+    text-align: center;
+    padding: 5px 0px 24px 0px;
+    font-family: $Roboto;
+}
+
+.current_assignment_Exodude label,
+.current_assignment_Exodude select {
+    display: inline-block;
+}
+
+.current_assignment label {
+    font-weight: bold;
+    font-size: 120%;
+    font-family: $Roboto;
+}
+
+
+/*.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.gallery__img {
+    display: flex;
+    width: auto;
+    height: 60%;
+    transition: 0.15s;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery__img:hover {
+    transform: scale(1.2);
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    font-size: 10px;
+    width: 90px;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -45px;
+    background-color: #1a1d40;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.tooltip .tooltiptextdown {
+    visibility: hidden;
+    font-size: 10px;
+    width: 90px;
+    bottom: 50%;
+    left: 50%;
+    margin-left: -45px;
+    background-color: #1a1d40;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+   
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptextdown {
+    visibility: visible;
+}*/
+
+#waitTimeThreshold:focus{
+    box-shadow: 0 0 8px #720dff;
+}
+
+#linksExodude {
+    display: none;
+}
+
+#inboxLink {
+    margin: 10px;
+    font-size: 16px;
+    padding: 3px 5px;
+    border-radius: 25px;
+    transition-duration: 0.4s;
+    background-image: linear-gradient(to right, #00bfff, #531aff, #720dff);
+    opacity: 0.6;
+    transition: 0.3s;
+    color: white;
+    font-family: $Roboto;
+}
+
+#inboxLink:hover {
+    color: white;
+    opacity: 1;
+}
+
+#inboxLink:focus {
+    box-shadow: 0 0 8px #720dff;
+}
+
+#dialog-boxExodude {
+    text-align: center;
+    font-size: medium;
+    font-family: $Roboto;
+    color: #1a1d40;
+    width: 98%;
+    overflow: hidden;
+    /* "overflow" value must be different from "visible" */
+    text-overflow: ellipsis;
+}
+
+
+body {
+    font-size: 85%;
+    font-family: $Roboto;
+    background-color: #f0f0f5;
+    width: auto;
+    max-height: 400px;
+    /*text-align: center;*/
+}
+
+/*a:visited {
+    color: blue;
+    font-family: $Roboto;
+}*/
+
+.centerExodude {
+    text-align: center;
+}
+
+#falcon {
+    display: block;
+    margin: auto;
+}
+
+#falcon:hover {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -webkit-transform: translateY(0);
+    }
+
+    40% {
+        -webkit-transform: translateY(-30px);
+    }
+
+    60% {
+        -webkit-transform: translateY(-15px);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.bounce {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+}
+
+
+.selectorExodude {
+    margin: 3px 0;
+    /* add top and bottom margin */
+    padding: 3px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.06);
+    border: 0;
+    width: 80%;
+    font-family: inherit;
+    font-size: inherit;
+    text-align: center;
+    font-family: $Roboto;
+}
+
+.section_heading {
+    padding: 8px;
+    background-color: #eee;
+    font-weight: bold;
+    font-family: $Roboto;
+}
+
+::marker {
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px !important;
+    text-align: start !important;
+    text-align-last: start !important;
+    font-family: $Roboto;
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 10px;
+  margin-bottom: 5px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, #00bfff, #531aff, #720dff);
+  /*background-color: #531aff;*/
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 5px;
+  width: 5px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+ background: #dcdde3;
+  /*background-color: #dcdde3;*/
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 8px #720dff;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -webkit-transform: translateY(0);
+    }
+
+    40% {
+        -webkit-transform: translateY(-30px);
+    }
+
+    60% {
+        -webkit-transform: translateY(-15px);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.bounce {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+}
+
+
+@font-face {
+
+    font-family: ‘Roboto’;
+    font-style: normal;
+    font-weight: 700;
+    src: url(‘chrome-extension://__MSG_@@extension_id__/Roboto-Regular.ttf’);
+}
+
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden;
+    /* Hidden by default. Visible on click */
+    margin: auto;
+    background-color: #1a1d40;
+    /* Paua background color */
+    color: #fff;
+    /* White text color */
+    text-align: center;
+    /* Centered text */
+    border-radius: 15px;
+    /* Rounded borders */
+    padding: 5px 10px;
+    position: fixed;
+    /* Sit on top of the screen */
+    z-index: 1;
+    /* Add a z-index if needed */
+    left: 20%;
+    /* Center the snackbar */
+    right: 20%;
+    top: 15px;
+    /* 15px from the top */
+    font-family: $Roboto;
+}
+
+#snackbar:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: #1a1d40;
+    border-bottom: 0;
+    border-right: 0;
+    margin-left: -10px;
+    margin-bottom: -20px;
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible;
+    /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+
+    to {
+        top: 15px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+
+    to {
+        top: 15px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        top: 15px;
+        opacity: 1;
+    }
+
+    to {
+        top: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        top: 15px;
+        opacity: 1;
+    }
+
+    to {
+        top: 0;
+        opacity: 0;
+    }
+}
