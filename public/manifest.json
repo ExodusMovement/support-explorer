@@ -1,7 +1,7 @@
 {
   "name": "Support Explorer Tool",
   "description": "Support Explorer Tool. Search TX, address or tickers as well as receive helpscout alerts.",
-  "version": "2023.2.3",
+  "version": "23.2.18",
   "manifest_version": 3,
 
   "background": {
@@ -13,15 +13,25 @@
     "open_in_tab": false
   },
 
-  "permissions": ["alarms", "tabs", "scripting", "activeTab", "storage", "notifications"],
+  "permissions": [
+    "alarms",
+    "tabs",
+    "scripting",
+    "activeTab",
+    "storage",
+    "notifications"
+  ],
 
   "content_security_policy": {
-    "extension_pages" : "script-src 'self'; connect-src 'self' https://api.tzstats.com/ https://algoindexer.algoexplorerapi.io/v2/ https://api.mainnet-beta.solana.com/; object-src 'self'"
- },
+    "extension_pages": "script-src 'self'; connect-src 'self' https://api.tzstats.com/ https://algoindexer.algoexplorerapi.io/v2/ https://api.mainnet-beta.solana.com/; object-src 'self'"
+  },
 
- "content_scripts": [
+  "content_scripts": [
     {
-      "matches": ["https://secure.helpscout.net/mailbox/4c021305e6c95617/*", "https://secure.helpscout.net/*"],
+      "matches": [
+        "https://secure.helpscout.net/mailbox/4c021305e6c95617/*",
+        "https://secure.helpscout.net/*"
+      ],
       "run_at": "document_idle",
       "css": ["popup.css"],
       "js": [
@@ -37,14 +47,14 @@
   "action": {
     "default_popup": "index.html",
     "default_icon": "SearchExo.png",
-    "default_title":"Support Explorer Tool"
+    "default_title": "Support Explorer Tool"
   },
 
-"host_permissions": [
-  "https://secure.helpscout.net/mailbox/4c021305e6c95617/*"
-],
+  "host_permissions": [
+    "https://secure.helpscout.net/mailbox/4c021305e6c95617/*"
+  ],
 
-   "icons":{
+  "icons": {
     "16": "SearchExo.png",
     "32": "SearchExo.png",
     "48": "SearchExo.png",
@@ -54,8 +64,8 @@
   "commands": {
     "_execute_action": {
       "suggested_key": {
-          "default": "Ctrl+J",
-          "mac": "Command+J"
+        "default": "Ctrl+J",
+        "mac": "Command+J"
       }
     }
   }

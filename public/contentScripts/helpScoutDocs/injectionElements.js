@@ -1,17 +1,17 @@
 function injectHTML(data) {
-  const doc = document.getElementsByTagName('textarea')[0]
+  const doc = document.getElementsByTagName("textarea")[0]
   const txt = doc.value
   const curPos = doc.selectionStart
 
   const newTxt = txt.slice(0, curPos) + data + txt.slice(curPos)
 
-  document.getElementsByTagName('textarea')[0].value = newTxt
+  document.getElementsByTagName("textarea")[0].value = newTxt
   updateCursor(curPos, data)
 }
 
 const updateCursor = function (curPos, text) {
   // update cursor to be at the end of insertion
-  const doc = document.getElementsByTagName('textarea')[0]
+  const doc = document.getElementsByTagName("textarea")[0]
   doc.selectionStart = curPos + text.length
   doc.selectionEnd = curPos + text.length
   doc.focus()
@@ -46,13 +46,19 @@ function injectKbParagraph() {
 }
 
 function injectKbListItem() {
-  const data = '<li>XXX</li>'
+  const data = "<li>XXX</li>"
 
   injectHTML(data)
 }
 
 function injectKbListLink() {
   const data = '<li><a href="XXX">XXX</a></li>'
+
+  injectHTML(data)
+}
+
+function injectKbLink() {
+  const data = '<a href="XXX">XXX</a>'
 
   injectHTML(data)
 }
@@ -186,7 +192,7 @@ function injectKbTable() {
   injectHTML(data)
 }
 
-function injectKbImage() {
+function injectKbListImage() {
   const data = `<dd>
 <center>
 <p>
@@ -194,6 +200,16 @@ function injectKbImage() {
 </p>
 </center>
 </dd>`
+
+  injectHTML(data)
+}
+
+function injectKbImage() {
+  const data = `<center>
+<p>
+        IMG
+</p>
+</center>`
 
   injectHTML(data)
 }
@@ -305,6 +321,7 @@ const toolkitUi = `
     </div>
     <div style='padding-left:5px; padding-top:5px;'>
       <button id='kb-p' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#eb4034; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Paragraph</button>
+      <button id='kb-link' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#1e4b75; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Link</button>
       <button id='kb-li' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#32a852; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>List item</button>
       <button id='kb-ll' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#8132a8; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>List link</button>
       <button id='kb-ul' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#a88132; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Unordered list</button>
@@ -326,6 +343,7 @@ const toolkitUi = `
     </div>
     <div style='padding-left:5px; padding-top:5px;'>
       <button id='kb-img' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#300fbf; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Image</button>
+      <button id='kb-list-img' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#1e4b75; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>List Image</button>
       <button id='kb-loom' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#8132a8; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Loom video</button>
       <button id='kb-youtube' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#ed0000; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>YouTube video</button>
       <button id='kb-class-mobile' class='sidebar-button' style='font-size:11px; margin:0px 0px 5px 5px; background-color:#209bab; color:white; border:none; box-shadow:2px 2px 2px #888888; border-radius:3px;'>Mobile img class</button>

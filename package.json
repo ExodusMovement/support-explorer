@@ -1,6 +1,6 @@
 {
   "name": "support-explorer-2",
-  "version": "2023.2.3",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@solana/web3.js": "^1.73.2",
