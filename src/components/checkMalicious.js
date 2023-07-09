@@ -111,6 +111,7 @@ let explorer;
         'TWXQmViN2X7dmfsUebgw7BC4cd99BE2ZWt': ["51", "scam", "TRX", "https://tronscan.org/#/address/"],
         'TWPzGEW22kUjkguNsWFxHz3skydPtXnPD7': ["80", "scam", "TRX", "https://tronscan.org/#/address/"],
         'TCob5HQQH2A8c4HSeAJ4RZJFMv68A4ofeZ': ["64", "scam", "TRX", "https://tronscan.org/#/address/"]
+        'TM6Pc9S17kmYVtm7zwyZdpj9BjQbV7APnw': ["2", "scam", "TRX", "https://tronscan.org/#/address/"]
     }
 
     for (let keys in malicious) {
